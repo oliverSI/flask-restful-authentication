@@ -1,4 +1,3 @@
-import os
 import re
 import datetime
 import functools
@@ -13,10 +12,6 @@ import config
 app = Flask(__name__)
 app.config.from_object('config')
 api = Api(app)
-
-for item in app.config:
-    if item in os.environ:
-        app.config[item] = os.environ[item]
 
 mail = Mail(app)
 client = pymongo.MongoClient(host=app.config['DB_HOST'], port=app.config['DB_PORT'])
