@@ -1,0 +1,18 @@
+postfix:
+  image: catatnight/postfix
+  volumes:
+    - /path/to/certs:/etc/postfix/certs
+  ports:
+    - "587:587"
+  environment:
+    maildomain: mail.example.com
+    smtp_user: "user:pwd"
+mongo:
+  image: mongo
+flask-restful-authentication:
+  build: flask-restful-authentication
+  links:
+    - postfix:postfix
+    - mongo:mongo
+  ports:
+    - "80:80"
