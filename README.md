@@ -2,11 +2,13 @@
 An example for RESTful authentication using Flask, PyMongo and jwt.
 ## 
 ## Quick Start
-1. Save your SSL certificates .key and .crt to /path/to/certs
-2. Clone the repository and run containers with the following command.
+1. Clone the repository with the following command.
 ```
 git clone https://github.com/oliverSI/flask-restful-authentication.git
-cd flask-restful-authentication
+```
+2. Save your SSL certificates .key and .crt in ./flask-restful-authentication/certs
+3. Run containers with the following command.
+```
 sudo docker-compose up -d
 ```
 
