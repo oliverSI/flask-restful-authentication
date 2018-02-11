@@ -1,5 +1,5 @@
 # flask-restful-authentication
-An example for RESTful authentication using Flask, PyMongo and jwt.
+An example for RESTful authentication using nginx, uWSGI, Flask, MongoDB and JSON Web Token(JWT).
 ## 
 ## Quick Start
 1. Clone the repository with the following command.
