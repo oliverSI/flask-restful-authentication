@@ -1,7 +1,19 @@
+nginx:
+  image: nginx
+  volumes:
+    - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    - ./nginx/log:/var/log/nginx
+    - ./certs/.key:/etc/nginx/server.key
+    - ./certs/.crt:/etc/nginx/server.crt
+    - ./app:/root/app
+    - /tmp:/tmp
+  ports:
+    - "80:80"
+    - "443:443"
 postfix:
   image: catatnight/postfix
   volumes:
-    - /path/to/certs:/etc/postfix/certs
+    - ./certs:/etc/postfix/certs
   ports:
     - "587:587"
   environment:
@@ -9,10 +21,11 @@ postfix:
     smtp_user: "user:pwd"
 mongo:
   image: mongo
-flask-restful-authentication:
-  build: flask-restful-authentication
+uwsgi-flask:
+  build: uwsgi-flask
   links:
     - postfix:postfix
     - mongo:mongo
-  ports:
-    - "80:80"
+  volumes:
+    - ./app:/root/app
+    - /tmp:/tmp
