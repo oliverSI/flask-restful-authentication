@@ -19,7 +19,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"email": "test@example.com
 ```
 ### Activation
 ```
-curl -X PUT -H "Content-Type: application/json" -d '{"activation_code": “activation code you received”}’ http://127.0.0.1/v1/activate
+curl -X PUT -H "Content-Type: application/json" -d '{"activation_code": "activation code you received"}’ http://127.0.0.1/v1/activate
 ```
 ### Login
 ```
@@ -27,5 +27,5 @@ curl -X GET -H "Content-Type: application/json" -d '{"email": “test@example.co
 ```
 ### Do something
 ```
-curl -H "Authorization: Bearer [token you got]” -H "Content-Type: application/json" http://127.0.0.1/v1/todo
+curl -H "Authorization: Bearer [token you got]" -H "Content-Type: application/json" http://127.0.0.1/v1/todo
 ```
