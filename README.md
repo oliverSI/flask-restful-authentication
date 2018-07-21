@@ -23,7 +23,7 @@ curl -X PUT -H "Content-Type: application/json" -d '{"activation_code": "activat
 ```
 ### Login
 ```
-curl -X GET -H "Content-Type: application/json" -d '{"email": “test@example.com", "password": "password”}’ http://127.0.0.1/v1/login
+curl -X GET -H "Content-Type: application/json" -d '{"email": “test@example.com", "password": "password"}’ http://127.0.0.1/v1/login
 ```
 ### Do something
 ```
