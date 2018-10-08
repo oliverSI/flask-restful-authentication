@@ -1,12 +1,12 @@
 import os
 
 DEBUG = True
-MAIL_SERVER = os.environ['POSTFIX_PORT_587_TCP_ADDR']
+MAIL_SERVER = os.environ['MAIL_SERVER']
 MAIL_PORT = 587
 MAIL_USE_TLS = True
 MAIL_USE_SSL = False
-MAIL_USERNAME = 'user'
-MAIL_PASSWORD = 'pwd'
+MAIL_USERNAME = os.environ['MAIL_USERNAME']
+MAIL_PASSWORD = os.environ['MAIL_PASSWORD']
 MAIL_DEFAULT_SENDER = 'from@example.com'
 DB_HOST = os.environ['MONGO_PORT_27017_TCP_ADDR']
 DB_PORT = 27017
