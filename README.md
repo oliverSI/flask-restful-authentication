@@ -1,15 +1,20 @@
 # flask-restful-authentication
-An example for RESTful authentication using nginx, uWSGI, Flask, MongoDB, Postfix and JSON Web Token(JWT).
+An example for RESTful authentication using nginx, uWSGI, Flask, MongoDB and JSON Web Token(JWT).
 ## 
 ## Quick Start
 1. Clone the repository with the following command.
 ```
 git clone https://github.com/oliverSI/flask-restful-authentication.git
 ```
-2. Save your SSL certificates .key and .crt in ./flask-restful-authentication/certs
+2. Set environment variable for the email configuration.
+```
+export EMAIL_SERVER=[EMAIL_SERVER]
+export EMAIL_USERNAME=[EMAIL_USERNAME]
+export EMAIL_PASSWORD=[EMAIL_PASSWORD]
+```
 3. Run containers with the following command.
 ```
-sudo docker-compose up -d
+docker-compose up -d
 ```
 
 ## Calling API
